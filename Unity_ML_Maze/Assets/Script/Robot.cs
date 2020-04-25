@@ -8,10 +8,12 @@ public class Robot : Agent
     public float timer = 7200;
     public float speed = 10;
     private Rigidbody rigRobot;
-    private Rigidbody rigCoin1;
-    private Rigidbody rigCoin4;
+    //public Rigidbody rigCoin1;
+
+    /*private Rigidbody rigCoin4;
     private Rigidbody rigCoin8;
-    private Rigidbody rigCoin11;
+    private Rigidbody rigCoin11;*/
+    
 
     /*public void Update()
     {
@@ -26,10 +28,15 @@ public class Robot : Agent
     private void Start()
     {
         rigRobot = GetComponent<Rigidbody>();
-        rigCoin1 = GameObject.Find("Coin1").GetComponent<Rigidbody>();
-        rigCoin4 = GameObject.Find("Coin4").GetComponent<Rigidbody>();
+        
+        /*if (rigCoin1 == GameObject.Find("Coin1").GetComponent<Rigidbody>())
+        {
+            print("52526335");
+        }*/
+        /*rigCoin4 = GameObject.Find("Coin4").GetComponent<Rigidbody>();
         rigCoin8 = GameObject.Find("Coin8").GetComponent<Rigidbody>();
-        rigCoin11 = GameObject.Find("Coin11").GetComponent<Rigidbody>();
+        rigCoin11 = GameObject.Find("Coin11").GetComponent<Rigidbody>();*/
+        
 
     }
     public override void OnEpisodeBegin()// the game restart environment
@@ -47,12 +54,12 @@ public class Robot : Agent
         sensor.AddObservation(rigRobot.velocity.x);
         sensor.AddObservation(rigRobot.velocity.z);
 
-
-        if (Final.Coin1 == false)
+        /*if (Final.Coin1 == false)
         {
             sensor.AddObservation(rigCoin1.position);
-        }
-        else if(Final.Coin4 == false)
+        }*/
+        //sensor.AddObservation(rigCoin1.position);
+        /*else if(Final.Coin4 == false)
         {
             sensor.AddObservation(rigCoin4.position);
         }
@@ -63,7 +70,7 @@ public class Robot : Agent
         else if(Final.Coin11 == false)
         {
             sensor.AddObservation(rigCoin11.position);
-        }
+        }*/
 
     }
 
@@ -86,7 +93,7 @@ public class Robot : Agent
         }*/
     }
 
-    public override float[] Heuristic()//測試
+    public override float[] Heuristic()
     {
         var action = new float[2];
         action[0] = Input.GetAxis("Horizontal");
