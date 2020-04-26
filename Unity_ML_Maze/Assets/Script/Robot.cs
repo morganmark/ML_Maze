@@ -4,49 +4,29 @@ using MLAgents.Sensors;
 
 public class Robot : Agent
 {
-    public static bool TimeCheck = true;
     public float timer = 7200;
     public float speed = 10;
     private Rigidbody rigRobot;
-    //public Rigidbody rigCoin1;
+    public Rigidbody rigCoin1;
 
-    /*private Rigidbody rigCoin4;
-    private Rigidbody rigCoin8;
-    private Rigidbody rigCoin11;*/
-    
-
-    /*public void Update()
-    {
-        timer -= Time.deltaTime;
-        if (timer <= 0)
-        {
-            TimeCheck = false;
-        }
-    }*/
-
+    public int time = 15;
+    public static bool timeCheck = false;
+    public static bool check = true;
 
     private void Start()
     {
         rigRobot = GetComponent<Rigidbody>();
-        
-        /*if (rigCoin1 == GameObject.Find("Coin1").GetComponent<Rigidbody>())
-        {
-            print("52526335");
-        }*/
-        /*rigCoin4 = GameObject.Find("Coin4").GetComponent<Rigidbody>();
-        rigCoin8 = GameObject.Find("Coin8").GetComponent<Rigidbody>();
-        rigCoin11 = GameObject.Find("Coin11").GetComponent<Rigidbody>();*/
-        
+
+        InvokeRepeating("TimeClock", 1f, 1f);
 
     }
-    public override void OnEpisodeBegin()// the game restart environment
+    public override void OnEpisodeBegin()
     {
         rigRobot.velocity = Vector3.zero;
         rigRobot.angularVelocity = Vector3.zero;
         Vector3 posRobot = new Vector3(-24.8f, 2.63f, -24.7f);
         transform.position = posRobot;
         Final.complete = false;
-        //Update();
     }
     public override void CollectObservations(VectorSensor sensor)
     {
@@ -54,26 +34,11 @@ public class Robot : Agent
         sensor.AddObservation(rigRobot.velocity.x);
         sensor.AddObservation(rigRobot.velocity.z);
 
-        /*if (Final.Coin1 == false)
-        {
-            sensor.AddObservation(rigCoin1.position);
-        }*/
-        //sensor.AddObservation(rigCoin1.position);
-        /*else if(Final.Coin4 == false)
-        {
-            sensor.AddObservation(rigCoin4.position);
-        }
-        else if(Final.Coin8 == false)
-        {
-            sensor.AddObservation(rigCoin8.position);
-        }
-        else if(Final.Coin11 == false)
-        {
-            sensor.AddObservation(rigCoin11.position);
-        }*/
+        sensor.AddObservation(rigCoin1.position);
 
     }
 
+    //加扣分">~<"
     public override void OnActionReceived(float[] vectorAction)
     {
         Vector3 control = Vector3.zero;
@@ -86,11 +51,15 @@ public class Robot : Agent
             SetReward(1);
             EndEpisode();
         }
-        /*if( rigRobot.position.y<0)
+        if(timeCheck == true)
         {
             SetReward(-1);
             EndEpisode();
-        }*/
+            timeCheck = false;
+            time = 15;
+            check = false;
+            Coin1.a = 1;
+        }
     }
 
     public override float[] Heuristic()
@@ -99,6 +68,18 @@ public class Robot : Agent
         action[0] = Input.GetAxis("Horizontal");
         action[1] = Input.GetAxis("Vertical");
         return action;
+    }
+
+    public void TimeClock()
+    {
+        if(time == 0)
+        {
+            timeCheck = true;
+        }
+        else
+        {
+            time -= 1;
+        }
     }
     
 }
