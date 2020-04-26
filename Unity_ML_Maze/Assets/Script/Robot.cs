@@ -9,7 +9,7 @@ public class Robot : Agent
     private Rigidbody rigRobot;
     public Rigidbody rigCoin1;
 
-    public int time = 15;
+    public int time = 180;
     public static bool timeCheck = false;
     public static bool check = true;
 
@@ -48,17 +48,40 @@ public class Robot : Agent
 
         if(Final.complete)
         {
-            SetReward(1);
-            EndEpisode();
-        }
-        if(timeCheck == true)
-        {
-            SetReward(-1);
+            SetReward(1.0f);
             EndEpisode();
             timeCheck = false;
-            time = 15;
+            time = 100;
             check = false;
             Coin1.a = 1;
+        }
+
+        /*if(Coin1.a == 2)
+        {
+            SetReward(0.5f);
+        }
+        if (Coin1.a == 3)
+        {
+            SetReward(0.5f);
+        }
+        if (Coin1.a == 4)
+        {
+            SetReward(0.5f);
+        }*/
+
+        if (timeCheck == true || rigRobot.position.y<0)
+        {
+            SetReward(-1.0f);
+            EndEpisode();
+            timeCheck = false;
+            time = 180;
+            check = false;
+            Coin1.a = 1;
+        }
+
+        if(Trap.trap == false)
+        {
+            SetReward(-0.5f);
         }
     }
 
@@ -81,5 +104,18 @@ public class Robot : Agent
             time -= 1;
         }
     }
-    
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.name == "Coin1")
+        {
+            SetReward(0.2f);
+        }
+
+        /*if(collision.gameObject.tag == "Trap")
+        {
+            SetReward(-0.1f);
+        }*/
+    }
+
 }
