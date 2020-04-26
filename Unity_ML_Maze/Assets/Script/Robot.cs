@@ -54,6 +54,7 @@ public class Robot : Agent
             time = 100;
             check = false;
             Coin1.a = 1;
+            Coin4.b = 1;
         }
 
         /*if(Coin1.a == 2)
@@ -77,6 +78,7 @@ public class Robot : Agent
             time = 180;
             check = false;
             Coin1.a = 1;
+            Coin4.b = 1;
         }
 
         if(Trap.trap == false)
@@ -108,6 +110,10 @@ public class Robot : Agent
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.name == "Coin1")
+        {
+            SetReward(0.2f);
+        }
+        if (collision.gameObject.name == "Coin4")
         {
             SetReward(0.2f);
         }

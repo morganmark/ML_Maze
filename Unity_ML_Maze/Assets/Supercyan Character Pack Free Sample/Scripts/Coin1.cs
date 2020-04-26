@@ -24,11 +24,11 @@ public class Coin1 : MonoBehaviour
             }
             else if (a == 3)
             {
-                Update();
+                //Update();
             }
             else if (a == 4)
             {
-                Update();
+                //Update();
                 
             }
 
@@ -54,21 +54,21 @@ public class Coin1 : MonoBehaviour
         }
             else if (a == 2)
             {
-                Vector3 Coin1 = new Vector3(-13.5f, 0.6f, -1.3f);
+                Vector3 Coin1 = new Vector3(-13.5f, 1.3f, -1.3f);
                 rigCoin1.position = Coin1;
                 rigCoin1.velocity = Vector3.zero;
                 rigCoin1.angularVelocity = Vector3.zero;
         }
             else if (a == 3)
             {
-                Vector3 Coin1 = new Vector3(-5f, 0.6f, 25f);
+                Vector3 Coin1 = new Vector3(-5f, 1.3f, 25f);
                 rigCoin1.position = Coin1;
                 rigCoin1.velocity = Vector3.zero;
                 rigCoin1.angularVelocity = Vector3.zero;
         }
             else if (a == 4)
             {
-                Vector3 Coin1 = new Vector3(27f, 0.6f, 17.5f);
+                Vector3 Coin1 = new Vector3(27f, 1.3f, 17.5f);
                 rigCoin1.position = Coin1;
                 rigCoin1.velocity = Vector3.zero;
                 rigCoin1.angularVelocity = Vector3.zero;

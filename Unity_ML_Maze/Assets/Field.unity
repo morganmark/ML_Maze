@@ -578,8 +578,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9999999, y: 49.268818, z: 0.9999999}
+  m_Center: {x: 0, y: 24.134407, z: 0}
 --- !u!23 &288196928
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -671,8 +671,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9999999, y: 46.424885, z: 0.9999999}
+  m_Center: {x: 0, y: 22.71244, z: 0}
 --- !u!23 &331795724
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1580,7 +1580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 747725618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: -15.81, z: 19.4}
+  m_LocalPosition: {x: 0, y: 0, z: 21.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1846722254}
@@ -1999,8 +1999,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9999999, y: 45.00269, z: 0.9999999}
+  m_Center: {x: 0, y: 22.001343, z: 0}
 --- !u!23 &871656951
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2511,8 +2511,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.95569575, y: 52.101994, z: 1}
+  m_Center: {x: 0.022152139, y: 25.550995, z: 0}
 --- !u!23 &1276703749
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2726,8 +2726,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9999999, y: 49.268055, z: 0.9999999}
+  m_Center: {x: 0, y: 24.134026, z: 0}
 --- !u!23 &1326601298
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3474,8 +3474,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9999999, y: 50.685978, z: 0.9999999}
+  m_Center: {x: 0, y: 24.842987, z: 0}
 --- !u!23 &1829823564
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3743,8 +3743,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9999999, y: 35.065247, z: 0.9999999}
+  m_Center: {x: 0, y: 17.032621, z: 0}
 --- !u!23 &1856173075
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3804,13 +3804,15 @@ GameObject:
   - component: {fileID: 1868960933}
   - component: {fileID: 1868960932}
   - component: {fileID: 1868960931}
+  - component: {fileID: 1868960935}
+  - component: {fileID: 1868960934}
   m_Layer: 0
   m_Name: Coin4
   m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1868960930
 Transform:
   m_ObjectHideFlags: 0
@@ -3819,7 +3821,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868960929}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.2, y: -15.81, z: -0.9}
+  m_LocalPosition: {x: -5, y: 1.3, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1846722254}
@@ -3836,7 +3838,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.728829, y: 0.9999943, z: 1.594025}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1868960932
 MeshRenderer:
@@ -3856,7 +3858,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8bdcefd5931f11c4896601f9e869f9f2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3885,6 +3887,35 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868960929}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1868960934
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868960929}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1868960935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868960929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 693310528d984e543b5048bb3564eeeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigCoin4: {fileID: 1868960934}
 --- !u!1 &1902944815
 GameObject:
   m_ObjectHideFlags: 0
@@ -4142,11 +4173,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929411931}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9999999, y: 49.867725, z: 0.9999999}
+  m_Center: {x: 0, y: 24.43386, z: 0}
 --- !u!23 &1929411934
 MeshRenderer:
   m_ObjectHideFlags: 0
