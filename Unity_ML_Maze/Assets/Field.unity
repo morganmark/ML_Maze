@@ -2614,7 +2614,7 @@ MonoBehaviour:
     vectorActionSize: 02000000
     vectorActionDescriptions: []
     vectorActionSpaceType: 1
-  m_Model: {fileID: 5022602860645237092, guid: 84b3f1d356dcc2747b7a611173cd6b24, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 52c5e364b98f93f48bdb038548aefefd, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: My Behavior
