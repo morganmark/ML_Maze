@@ -8,6 +8,9 @@ public class Robot : Agent
     public float speed = 10;
     private Rigidbody rigRobot;
     public Rigidbody rigCoin1;
+    public Rigidbody Cube;
+    public Rigidbody Cube2;
+    public Rigidbody Cube3;
 
     public int time = 180;
     public static bool timeCheck = false;
@@ -33,6 +36,9 @@ public class Robot : Agent
         sensor.AddObservation(transform.position);
         sensor.AddObservation(rigRobot.velocity.x);
         sensor.AddObservation(rigRobot.velocity.z);
+        sensor.AddObservation(Cube.position);
+        sensor.AddObservation(Cube2.position);
+        sensor.AddObservation(Cube3.position);
 
         sensor.AddObservation(rigCoin1.position);
 
@@ -48,7 +54,7 @@ public class Robot : Agent
 
         if(Final.complete)
         {
-            SetReward(10.0f);
+            SetReward(1.0f);
             EndEpisode();
             timeCheck = false;
             time = 100;
@@ -109,6 +115,10 @@ public class Robot : Agent
 
     private void OnCollisionEnter(Collision collision)
     {
+        if(collision.gameObject.tag == "Add")
+        {
+            SetReward(0.1f);
+        }
         if(collision.gameObject.name == "Coin1")
         {
             SetReward(0.1f);
