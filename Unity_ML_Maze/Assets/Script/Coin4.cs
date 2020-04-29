@@ -47,14 +47,14 @@ public class Coin4 : MonoBehaviour
         {*/
         if (b == 1)
         {
-            Vector3 Coin1 = new Vector3(-5f, 1.3f, 25f);
+            Vector3 Coin1 = new Vector3(-5f, 1.3f, 15.2f);
             rigCoin4.position = Coin1;
             rigCoin4.velocity = Vector3.zero;
             rigCoin4.angularVelocity = Vector3.zero;
         }
         else if (b == 2)
         {
-            Vector3 Coin1 = new Vector3(27f, 1.3f, 17.5f);
+            Vector3 Coin1 = new Vector3(0f, 1.3f, 25.9f);
             rigCoin4.position = Coin1;
             rigCoin4.velocity = Vector3.zero;
             rigCoin4.angularVelocity = Vector3.zero;

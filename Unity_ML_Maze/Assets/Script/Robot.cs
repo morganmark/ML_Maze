@@ -48,7 +48,7 @@ public class Robot : Agent
 
         if(Final.complete)
         {
-            SetReward(1.0f);
+            SetReward(10.0f);
             EndEpisode();
             timeCheck = false;
             time = 100;
@@ -83,7 +83,7 @@ public class Robot : Agent
 
         if(Trap.trap == false)
         {
-            SetReward(-0.5f);
+            //SetReward(-0.5f);
         }
     }
 
@@ -111,17 +111,21 @@ public class Robot : Agent
     {
         if(collision.gameObject.name == "Coin1")
         {
-            SetReward(0.2f);
+            SetReward(0.1f);
         }
         if (collision.gameObject.name == "Coin4")
         {
-            SetReward(0.2f);
+            SetReward(0.1f);
         }
 
-        /*if(collision.gameObject.tag == "Trap")
+        if(collision.gameObject.tag == "Trap")
         {
-            SetReward(-0.1f);
-        }*/
+            //SetReward(-0.1f);
+        }
+        if (collision.gameObject.tag == "BWall")
+        {
+            //SetReward(-0.1f);
+        }
     }
 
 }
